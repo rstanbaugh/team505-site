@@ -153,6 +153,11 @@ main {
   gap: 1rem;
 }
 
+.contact-grid > div:last-child {
+  justify-self: end;
+  text-align: right;
+}
+
 .label {
   margin: 0 0 0.2rem;
   font-size: 0.68rem;
@@ -199,5 +204,10 @@ main {
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-grid > div:last-child {
+    justify-self: start;
+    text-align: left;
   }
 }
