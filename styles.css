@@ -250,13 +250,13 @@ main {
 .footer-links {
   display: block;
   margin-top: 0.3rem;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-style: italic;
   opacity: 0.6;
 }
 
 .footer-links a {
-  color: inherit;
+  color: #486477;
   text-decoration: none;
 }
 
