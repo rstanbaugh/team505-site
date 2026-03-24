@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Team505</title>
+  <meta name="description" content="Privacy Policy for Team505 messaging services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Sora:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=20260324a">
+</head>
+<body>
+  <div class="site-bg" aria-hidden="true"></div>
+
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="nav-home" href="/">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-about" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="about-menu">
+          About
+        </button>
+        <div class="nav-dropdown-menu" id="about-menu" role="menu" aria-label="About menu">
+          <a class="nav-dropdown-item" role="menuitem" href="/#about">About</a>
+          <a class="nav-dropdown-item" role="menuitem" href="/privacy/">Privacy</a>
+          <a class="nav-dropdown-item" role="menuitem" href="/terms/">Terms</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="policy-main">
+    <section class="policy-card">
+      <h1>Privacy Policy</h1>
+      <p class="effective-date">Effective Date: March 2026</p>
+
+      <section class="policy-section">
+        <p>
+          Team505 Holdings LLC ("we", "our", or "us") operates a messaging-based service
+          that allows users to interact with an AI assistant via SMS and other communication
+          channels.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>Information We Collect</h2>
+        <p>We may collect the following information:</p>
+        <ul class="policy-list">
+          <li>Phone numbers used to communicate with the service</li>
+          <li>Message content sent to and received from the service</li>
+          <li>Basic usage metadata (timestamps, delivery status)</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>How We Use Information</h2>
+        <p>We use collected information solely to:</p>
+        <ul class="policy-list">
+          <li>Provide and improve the messaging service</li>
+          <li>Generate responses to user inquiries</li>
+          <li>Maintain system functionality and reliability</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>Data Sharing</h2>
+        <p>
+          We do not sell, rent, or share personal information with third parties for marketing
+          purposes.
+        </p>
+        <p class="policy-contact">
+          Information may be processed by service providers (e.g., messaging infrastructure
+          providers) strictly for the purpose of delivering the service.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>Data Retention</h2>
+        <p>
+          We retain message data only as long as necessary to operate and improve the service.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>Security</h2>
+        <p>
+          We implement reasonable technical and organizational measures to protect information
+          from unauthorized access.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>User Control</h2>
+        <p>Users may stop receiving messages at any time by replying: <code>STOP</code></p>
+      </section>
+
+      <section class="policy-section">
+        <h2>Contact</h2>
+        <p>For questions regarding this Privacy Policy, contact:</p>
+        <p class="policy-contact"><a href="mailto:support@team505.ai">support@team505.ai</a></p>
+      </section>
+
+      <section class="policy-section">
+        <h2>Changes</h2>
+        <p>
+          We may update this policy from time to time. Updates will be posted on this page.
+        </p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> RSM. All rights reserved.</small>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const dropdown = document.querySelector(".nav-dropdown");
+    const toggle = dropdown.querySelector(".nav-about");
+
+    toggle.addEventListener("click", () => {
+      const isOpen = dropdown.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!dropdown.contains(event.target)) {
+        dropdown.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        dropdown.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  </script>
+</body>
+</html>

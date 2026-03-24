@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms and Conditions | Team505</title>
+  <meta name="description" content="Terms and Conditions for Team505 messaging services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Sora:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=20260324a">
+</head>
+<body>
+  <div class="site-bg" aria-hidden="true"></div>
+
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="nav-home" href="/">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-about" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="about-menu">
+          About
+        </button>
+        <div class="nav-dropdown-menu" id="about-menu" role="menu" aria-label="About menu">
+          <a class="nav-dropdown-item" role="menuitem" href="/#about">About</a>
+          <a class="nav-dropdown-item" role="menuitem" href="/privacy/">Privacy</a>
+          <a class="nav-dropdown-item" role="menuitem" href="/terms/">Terms</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="policy-main">
+    <section class="policy-card">
+      <h1>Terms and Conditions</h1>
+      <p class="effective-date">Effective Date: March 2026</p>
+
+      <section class="policy-section">
+        <p>
+          By using the Team505 messaging service, you agree to the following terms.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>Service Description</h2>
+        <p>
+          Team505 provides a conversational messaging service that allows users to interact
+          with an AI assistant via SMS.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>Acceptable Use</h2>
+        <p>You agree not to:</p>
+        <ul class="policy-list">
+          <li>Use the service for unlawful purposes</li>
+          <li>Attempt to disrupt or abuse the system</li>
+          <li>Send harmful, abusive, or malicious content</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>Messaging Terms</h2>
+        <ul class="policy-list">
+          <li>Message frequency varies based on user interaction</li>
+          <li>Standard message and data rates may apply</li>
+          <li>You may opt out at any time by replying: <code>STOP</code></li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>No Warranty</h2>
+        <p>
+          The service is provided "as is" without warranties of any kind. We do not guarantee
+          accuracy, availability, or reliability of responses.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>Limitation of Liability</h2>
+        <p>
+          Team505 Holdings LLC shall not be liable for any damages resulting from the use of
+          this service.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>Changes</h2>
+        <p>
+          We may update these terms at any time. Continued use of the service constitutes
+          acceptance of the updated terms.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>Contact</h2>
+        <p class="policy-contact"><a href="mailto:support@team505.ai">support@team505.ai</a></p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> RSM. All rights reserved.</small>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const dropdown = document.querySelector(".nav-dropdown");
+    const toggle = dropdown.querySelector(".nav-about");
+
+    toggle.addEventListener("click", () => {
+      const isOpen = dropdown.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!dropdown.contains(event.target)) {
+        dropdown.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        dropdown.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  </script>
+</body>
+</html>

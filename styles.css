@@ -61,8 +61,13 @@ body {
   align-items: center;
 }
 
+.nav-home {
+  margin-right: auto;
+}
+
 .nav-home,
-.nav-about {
+.nav-about,
+.nav-dropdown-item {
   text-decoration: none;
   color: var(--logo-blue-deep);
   font-family: "Sora", sans-serif;
@@ -71,14 +76,75 @@ body {
   transition: opacity 160ms ease, transform 160ms ease;
 }
 
+.nav-home:visited,
+.nav-dropdown-item:visited {
+  color: var(--logo-blue-deep);
+  text-decoration: none;
+}
+
+.nav-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
 .nav-about {
-  margin-left: auto;
+  display: block;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  line-height: inherit;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-about:focus-visible,
+.nav-dropdown-item:focus-visible,
+.nav-home:focus-visible {
+  outline: 2px solid rgba(79, 120, 148, 0.45);
+  outline-offset: 2px;
+  border-radius: 6px;
 }
 
 .nav-home:hover,
-.nav-about:hover {
+.nav-about:hover,
+.nav-dropdown-item:hover {
   opacity: 0.75;
   transform: translateY(-1px);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  min-width: 170px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 10px 26px rgba(19, 34, 45, 0.12);
+  padding: 0.45rem;
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 10;
+}
+
+.nav-dropdown.open .nav-dropdown-menu {
+  display: flex;
+  gap: 0.15rem;
+}
+
+.nav-dropdown-item {
+  display: block;
+  text-decoration: none;
+  color: var(--logo-blue-deep);
+  white-space: nowrap;
+  padding: 0.4rem 0.45rem;
+  border-radius: 8px;
+}
+
+.nav-dropdown-item:hover {
+  background: var(--surface-soft);
 }
 
 main {
@@ -178,6 +244,68 @@ main {
   padding: 1.25rem 1rem 2rem;
 }
 
+.policy-main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1.2rem 1.4rem 2rem;
+}
+
+.policy-card {
+  margin: 1.2rem auto 0;
+  max-width: 760px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.1rem 1.25rem 1.2rem;
+  box-shadow: 0 10px 35px rgba(19, 34, 45, 0.08);
+  animation: rise 700ms ease both;
+}
+
+.policy-card h1 {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.5rem, 3.2vw, 2rem);
+  color: var(--logo-blue-deep);
+}
+
+.effective-date {
+  margin: 0.45rem 0 1rem;
+  font-size: 0.86rem;
+  color: #486477;
+}
+
+.policy-section {
+  margin-top: 1rem;
+}
+
+.policy-section h2 {
+  margin: 0 0 0.4rem;
+  font-family: "Sora", sans-serif;
+  font-size: 1rem;
+  color: var(--logo-blue-deep);
+}
+
+.policy-section p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.policy-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1.1rem;
+  line-height: 1.65;
+}
+
+.policy-contact {
+  margin-top: 0.45rem;
+}
+
+.policy-contact a {
+  color: var(--ink);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
 @keyframes rise {
   from {
     opacity: 0;
@@ -198,8 +326,21 @@ main {
     padding: 1rem 1rem 1.6rem;
   }
 
+  .policy-main {
+    padding: 1rem 1rem 1.6rem;
+  }
+
   .hero {
     margin-top: 0.6rem;
+  }
+
+  .nav-dropdown-menu {
+    right: 0;
+    min-width: 150px;
+  }
+
+  .policy-card {
+    padding: 0.95rem 1rem 1.05rem;
   }
 
   .contact-grid {
