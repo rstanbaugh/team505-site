@@ -126,7 +126,8 @@ main {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 16px;
-  padding: 1.35rem 1.25rem;
+  padding: 0.65rem 1.25rem 0.9rem;
+  font-size: 0.92rem;
   box-shadow: 0 10px 35px rgba(19, 34, 45, 0.08);
   animation: rise 850ms 120ms ease both;
 }
@@ -134,7 +135,8 @@ main {
 .card h2 {
   font-family: "Sora", sans-serif;
   margin-top: 0;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.55rem;
+  font-size: 1.1rem;
   color: var(--logo-blue-deep);
 }
 
@@ -143,7 +145,7 @@ main {
 }
 
 .contact-grid {
-  margin-top: 1rem;
+  margin-top: 0.6rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
@@ -151,7 +153,7 @@ main {
 
 .label {
   margin: 0 0 0.2rem;
-  font-size: 0.74rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--logo-blue-deep);
