@@ -1,13 +1,18 @@
 # team505-site
 
-Minimal, logo-driven company announcement site for deployment on Cloudflare Pages.
+Minimal, logo-driven company site deployed on Cloudflare Pages.
+
+## Live Site
+
+- https://team505.ai
+- https://www.team505.ai
 
 ## Project Structure
 
 - `index.html` - Main one-page site (Home + About section + contact info)
 - `about.html` - Redirect to About section on `index.html`
 - `styles.css` - Site styling and animations
-- `assets/rsm-logo.png` - Company logo
+- `assets/rsm-logo-1.png` - Primary logo currently used on the site
 
 ## Local Preview
 
@@ -22,18 +27,18 @@ python3 -m http.server 8080
 
 Then open `http://localhost:8080`.
 
-## Publish With Git + Cloudflare Pages
+## Deployment Workflow
 
-1. Create a new GitHub repository and push this folder.
-2. In Cloudflare Dashboard, go to **Workers & Pages** -> **Create** -> **Pages** -> **Connect to Git**.
-3. Select your GitHub repo and branch (usually `main`).
-4. Build settings:
-   - Framework preset: `None`
-   - Build command: leave blank
-   - Build output directory: `/` (root)
-5. Save and deploy.
+Deployment is connected to GitHub through Cloudflare Pages and deploys automatically on push.
 
-Cloudflare will auto-deploy on every new push to the selected branch.
+1. Edit files locally.
+2. Run `git add .`.
+3. Run `git commit -m "..."`.
+4. Run `git push`.
+5. Cloudflare Pages detects the push.
+6. Cloudflare Pages rebuilds and deploys automatically.
+
+No manual deploy step is required after push.
 
 ## Optional Custom Domain
 
