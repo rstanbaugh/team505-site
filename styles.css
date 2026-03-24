@@ -310,6 +310,11 @@ main {
   line-height: 1.65;
 }
 
+.legal-disclaimer {
+  font-size: 0.82rem;
+  color: #5e7788;
+}
+
 .policy-list {
   margin: 0.4rem 0 0;
   padding-left: 1.1rem;
