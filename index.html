@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSM | Company Announcement</title>
+  <meta name="description" content="RSM company announcement and contact information.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Sora:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-bg" aria-hidden="true"></div>
+
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="nav-home" href="#home">Home</a>
+      <a class="nav-about" href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <img src="assets/rsm-logo.png" alt="RSM logo" class="hero-logo">
+      <p class="eyebrow">Company Announcement</p>
+      <h1 class="title">RSM</h1>
+      <p class="subtitle">A focused team delivering practical, dependable technology solutions.</p>
+    </section>
+
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>
+        RSM is building and operating software with a clear, minimalist approach.
+        This page is our primary public contact point.
+      </p>
+      <div class="contact-grid">
+        <div>
+          <p class="label">Email</p>
+          <a href="mailto:contact@rsm-company.com">contact@rsm-company.com</a>
+        </div>
+        <div>
+          <p class="label">Phone</p>
+          <a href="tel:+15555550100">+1 (555) 555-0100</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> RSM. All rights reserved.</small>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
