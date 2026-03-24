@@ -57,8 +57,6 @@ body {
 }
 
 .nav {
-  max-width: 980px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
 }
@@ -73,6 +71,7 @@ body {
   text-decoration: none;
   color: var(--logo-blue-deep);
   font-family: "Sora", sans-serif;
+  font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   transition: opacity 160ms ease, transform 160ms ease;
@@ -162,7 +161,7 @@ main {
 }
 
 .hero-logo {
-  width: min(340px, 72vw);
+  width: min(440px, 74vw);
   height: auto;
 }
 
