@@ -250,6 +250,7 @@ main {
 .footer-links {
   display: block;
   margin-top: 0.3rem;
+  font-size: 0.75rem;
   font-style: italic;
   opacity: 0.6;
 }
