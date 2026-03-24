@@ -115,13 +115,15 @@ main {
 
 .subtitle {
   max-width: 640px;
-  margin: 0.85rem auto 0;
-  font-size: 1.03rem;
+  margin: 1rem auto 0;
+  font-size: 0.98rem;
   line-height: 1.55;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
 }
 
 .card {
-  margin: 2.2rem auto 0;
+  margin: 3rem auto 0;
   max-width: 760px;
   background: var(--surface);
   border: 1px solid var(--line);
